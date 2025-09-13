@@ -42,8 +42,8 @@ Copy code
 docker run -p 5000:5000 flask-cicd
 Visit: http://localhost:5000
 
-☸️ Kubernetes Setup (K3s on EC2)
-Apply Deployment & Service
+## ☸️ Kubernetes Setup (K3s on EC2)
+## Apply Deployment & Service
 bash
 Copy code
 kubectl apply -f k8s/deployment.yml
@@ -53,7 +53,9 @@ bash
 Copy code
 kubectl get pods
 kubectl get svc
-🔄 CI/CD Pipeline (GitHub Actions)
+
+
+## 🔄 CI/CD Pipeline (GitHub Actions)
 The pipeline has 3 stages:
 
 Build & Test
@@ -78,7 +80,7 @@ Applies Kubernetes manifests (deployment.yml, service.yml)
 
 Rolls out the new version
 
-🔑 GitHub Secrets Configuration
+## 🔑 GitHub Secrets Configuration
 Set the following secrets in your repository:
 
 DOCKER_USERNAME → Your DockerHub username
@@ -89,7 +91,7 @@ EC2_HOST → Your EC2 public IP
 
 EC2_SSH_KEY → Contents of your .pem private key
 
-✅ Deployment Verification
+## ✅ Deployment Verification
 Get the service details:
 
 bash
